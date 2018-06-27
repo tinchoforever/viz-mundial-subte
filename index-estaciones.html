@@ -54,54 +54,32 @@ var format = d3.time.format("%Y-%m-%d %H:%M:%S");
 var formatIncidentes = d3.time.format("%d/%m/%Y %H:%M:%S");
 var mainData = [];
 var incidentes = [];
-var nombresEstaciones = [];
-var promedioEstaciones = [];
-d3.csv('data/nombre-estaciones.csv', function(csvEstaciones) {
-  nombresEstaciones = csvEstaciones;
-  d3.csv('data/estaciones.csv', function(csvPromedioEstaciones) {
-    promedioEstaciones = csvPromedioEstaciones.map(function(e){
-      var n = csvEstaciones.filter(function(d){
-        return d.ESTACION.trim() == e.estacion.trim()
-      });
-      if (!n[0]){
-        console.log(e.estacion);
-      }else {
-        e.estacion = n[0];
-        e.estacion.ID = parseInt(e.estacion.ID);
-      }
-      return e;
-    }).sort(function(a,b){
-      return a.estacion.ID - b.estacion.ID;
-    })
-var graph = d3.csv('data-linea.csv', function(csv) {
+var graph = d3.csv('data.csv', function(csv) {
   mainData = csv;
-    d3.csv('data/arg-nig.csv', function(data) {
-      incidentes = data;
-      var estaciones = ['LINEA_B',
-  'LINEA_A',
-  'LINEA_C',
-  'LINEA_D',
-  'LINEA_E',
-  'LINEA_H'
-  ];
-
-  var lineas = ['A','B','C','D','E','H'];
+  d3.csv('data/arg-nig.csv', function(data) {
+    incidentes = data;
+    var estaciones = ['PLAZA MISERERE', /*las estaciones pedidas */
+                  'FEDERICO LACROZE', 
+                    'CARLOS PELLEGRINI',
+                    'RETIRO',
+                    'CONSTITUCION',
+                    'CONGRESO DE TUCUMAN', 
+                    'CATEDRAL',
+                    'BOLIVAR',
+                    'HOSPITALES'];
 
     for (var i = 0; i < estaciones.length; i++) {
-      var element = '<h2><a href="#" class="estacion" estacion="'+  estaciones[i] +'">' + estaciones[i]  + ' | </a></h2>';
+      var element = '<h2> ¿Cúantas personas entraron en la estación ' + estaciones[i] + '?</h2>';
       $('body').append(element);
        chart(estaciones[i]);
     }
-      });
-    });
+
   });
 });
 function chart(estacion) {
 var cl = estacion.replace(' ', '-').replace(' ', '-');
 var id = 'chart-'+ cl;
-var circles = 'circles-'+ cl;
 $('body').append('<div id="'+id +'"></div>');
-$('body').append('<div id="'+circles +'"></div>');
 
     var estacionData = mainData.filter(function(d){
       return d.key == estacion;
@@ -164,36 +142,6 @@ $('body').append('<div id="'+circles +'"></div>');
             }
         }
     }
-  });
-
-d3.xml("images/mapa.svg").mimeType("image/svg+xml").get(function(error, xml) {
-        if (error) throw error;
-          var lineaLetra = estacion.replace('LINEA_','');
-           var dataEstaciones = promedioEstaciones.filter(function(e){
-            return e.linea === lineaLetra;
-           })
-
-        d3.select('#' + circles).node().appendChild(xml.documentElement);
-        var s = '#' + circles + ' svg';
-        d3.select('#' + circles + ' svg')
-          .attr('width','100%')
-          .attr('height','550px');
-
-          d3.selectAll(s + ' .linea circle').attr('r', function(d,i){
-
-            var id=  parseInt(d3.select(this).attr("id"));
-            var currentPersons = dataEstaciones.filter(function(de){
-              return de.estacion.ID == id;
-            
-            });
-            if (!currentPersons[0]){
-              return 0;
-            }else {
-              return parseInt(currentPersons[0].personas) / 100;
-            }
-          });
-        
-
   });
     
 }
