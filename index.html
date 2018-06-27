@@ -95,7 +95,7 @@ $('body').append('<div id="'+id +'"></div>');
       return d.date;
     });
     var partidoValues = incidentes.map(function(d){
-      return d.Equipo == "Argentina" ?  1200  : 1000;
+      return d.puntos;
     });
     var datesPartido = incidentes.map(function(d){
       return formatIncidentes.parse(d.fecha);
