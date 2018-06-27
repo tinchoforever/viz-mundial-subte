@@ -56,15 +56,17 @@ var mainData = [];
 var incidentes = [];
 var graph = d3.csv('data-linea.csv', function(csv) {
   mainData = csv;
-  d3.csv('data/arg-nig.csv', function(data) {
-    incidentes = data;
-    var estaciones = ['LINEA_B',
-'LINEA_A',
-'LINEA_C',
-'LINEA_D',
-'LINEA_E',
-'LINEA_H'
-];
+    d3.csv('data/arg-nig.csv', function(data) {
+      incidentes = data;
+      var estaciones = ['LINEA_B',
+  'LINEA_A',
+  'LINEA_C',
+  'LINEA_D',
+  'LINEA_E',
+  'LINEA_H'
+  ];
+
+  var lineas = ['A','B','C','D','E','H'];
 
     for (var i = 0; i < estaciones.length; i++) {
       var element = '<h2><a href="#" class="estacion" estacion="'+  estaciones[i] +'">' + estaciones[i]  + ' | </a></h2>';
