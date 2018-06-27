@@ -9,16 +9,18 @@ angular.module('initApp')
     var vm = {};
     vm.mainValues = [30,200,100,400,150,250];
     $scope.vm = vm;
-    $scope.datapoints = [
-        {"x": "one", "top-1": 10, "top-2": 12},
-        {"x": "two", "top-1": 11, "top-2": 13},
-        {"x": "three", "top-1": 12, "top-2": 14},
-        {"x": "four", "top-1": 13, "top-2": 15},
-        {"x": "five", "top-1": 14, "top-2": 16}
-    ];
-    $scope.datacolumns = [{"id": "top-1", "type": "bar", "name": "Top one"},
-        {"id": "top-2", "type": "bar", "name": "Top two"}];
-    $scope.datax = {"id": "x"};
+
+    
+    // $scope.datapoints = [
+    //     {"x": "one", "top-1": 10, "top-2": 12},
+    //     {"x": "two", "top-1": 11, "top-2": 13},
+    //     {"x": "three", "top-1": 12, "top-2": 14},
+    //     {"x": "four", "top-1": 13, "top-2": 15},
+    //     {"x": "five", "top-1": 14, "top-2": 16}
+    // ];
+    // $scope.datacolumns = [{"id": "top-1", "type": "bar", "name": "Top one"},
+    //     {"id": "top-2", "type": "bar", "name": "Top two"}];
+    // $scope.datax = {"id": "x"};
 
   
 	$scope.changeOption = function(){
