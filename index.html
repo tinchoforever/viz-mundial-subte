@@ -113,6 +113,9 @@ $('body').append('<div id="'+circles +'"></div>');
     var values = estacionData.map(function(d){
       return d.value;
     });
+    var valuesBehind = estacionData.map(function(d,i){
+      return d.value /2 / (i+1) * i ;
+    });
     var dates = estacionData.map(function(d){
       return d.date;
     });
@@ -122,12 +125,15 @@ $('body').append('<div id="'+circles +'"></div>');
     var datesPartido = incidentes.map(function(d){
       return formatIncidentes.parse(d.fecha);
     });
-    var c1 = ['estacion'].concat(values);
+    var c1 = ['estacionMes'].concat(values);
+    var c3c = ['estacionEnPartido'].concat(valuesBehind);
     var c2 = ['partido'].concat(partidoValues);
-    dates = ['dates'].concat(dates);
+    var datesP1 = ['dates-p1'].concat(dates);
+    var datesP2 = ['dates-p2'].concat(dates);
     var w = 1200;
     var h = w * 0.31;
-    datesPartido = ['dates-partido'].concat(datesPartido);
+    var datesPartidoP1 = ['dates-partido'].concat(datesPartido);
+    
     var chart = c3.generate({
     bindto: '#'+id,
     size: {
@@ -137,17 +143,21 @@ $('body').append('<div id="'+circles +'"></div>');
     },
     data: {
        xs: {
-           'estacion': 'dates',
+           'estacionMes': 'dates-p1',
+           'estacionEnPartido': 'dates-p2',
            'partido': 'dates-partido',
       },
       columns: [
-        dates,
-        datesPartido,
-        c2, 
-        c1,
+        datesP1,
+        datesP2,
+        datesPartidoP1,
+        c1, 
+        c2,
+        c3c,
       ],
       types: {
-            'estacion': 'spline',
+            'estacionMes': 'spline',
+            'estacionEnPartido': 'spline',
             'partido': 'bar',
         },
         labels: {
