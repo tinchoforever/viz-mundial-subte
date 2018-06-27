@@ -103,9 +103,16 @@ $('body').append('<div id="'+id +'"></div>');
     var c1 = ['estacion'].concat(values);
     var c2 = ['partido'].concat(partidoValues);
     dates = ['dates'].concat(dates);
+    var w = 1200;
+    var h = w * 0.31;
     datesPartido = ['dates-partido'].concat(datesPartido);
     var chart = c3.generate({
     bindto: '#'+id,
+    size: {
+      width: w,
+      height: h
+      
+    },
     data: {
        xs: {
            'estacion': 'dates',
