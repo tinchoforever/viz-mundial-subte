@@ -1,0 +1,38 @@
+<div class="container">
+           
+<div class="container">
+	<h4> Mira los temas que fueron mas reclamados durante <p>
+	Año:<select name="options" ng-change="changeOption()" id="options" ng-model="selectedYear" ng-options="opt for opt in selectOptions">
+</select>
+	Línea:<select name="options" ng-change="changeOption()" id="lineas" ng-model="selectedLinea" ng-options="opt for opt in selectLineaOptions">
+	</select>
+		Temas:<select name="options" ng-change="changeOption()" id="temas" ng-model="selectedTema" ng-options="opt for opt in selectTemaOptions">
+	</select>
+</p> </h4>
+<p> Por lo que podemos observar 
+			<span ng-show="selectedYear == 'TODOS'"> de <strong> 2014 a 2017 </strong> </span>
+			<span ng-hide="selectedYear == 'TODOS'"> durante el año <strong> {{selectedYear}} </strong> </span> 
+			<span ng-hide="selectedEstacion != 'TODAS'">
+				<span ng-show="selectedLinea =='TODAS'"> <strong> en toda </strong> la red de subterrraneos de Buenos Aires </span>
+				<span ng-show="selectedLinea !='TODAS'"> en toda la linea <strong> {{selectedLinea}}</strong> </span>
+				en la estación <strong>{{selectedEstacion}} </strong>los usuarios del subte reclamaron <strong> {{all}} </strong> veces <span ng-show="selectedTema != 'TODOS'"> por {{selectedTema}}</span> donde la estaciones mas importantes son
+			
+				<span ng-repeat="r in primerosTres">
+					<strong> {{r.categoria}} </strong> unas  <strong> {{r.valor}} </strong> veces,
+				</span>
+			
+</div>
+
+
+				<subte-chart
+		container="'subte'"
+		lines="serve"
+	></subte-chart>
+
+
+<div ng-show="currentMapEstacion">
+<h4> En {{currentMapEstacion.estacion}} {{currentMapEstacion.linea}} hubieron  {{currentMapEstacion.valor}} reclamos, donde los mas importantes fueron </h4> 
+<span ng-repeat="r in currentMove.slice(0,4)">
+				<strong> {{r.categoria}} </strong> unas  <strong> {{r.valor}} </strong> veces,
+			</span> 
+		</div>

@@ -1,0 +1,25 @@
+<div class="container">
+	<h1> Subtes </h1>
+
+<c3chart bindto-id="chartTickSample">
+    <chart-column column-id="line1"
+                  column-name="Line 1"
+                  column-color="red"
+                  column-values="30,200,100,400,150,250"
+                  column-type="spline"/>
+    <chart-column column-id="bar1"
+                  column-name="Bar 1"
+                  column-color="green"
+                  column-values="50,20,10,40,15,25"
+                  column-type="bar"/>
+    <chart-axis>
+        <chart-axis-x axis-position="outer-center" axis-label="Number by 10"
+                      axis-type="category">
+            <chart-axis-x-tick tick-rotate="50"/>
+        </chart-axis-x>
+        <chart-axis-y>
+            <chart-axis-y-tick tick-values="50,100,150,200,250"/>
+        </chart-axis-y>
+    </chart-axis>
+</c3chart>
+</div>

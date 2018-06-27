@@ -1,0 +1,55 @@
+<div class="container">
+	<h4> Mira los temas que fueron mas reclamados durante <p>
+		Año:<select name="options" ng-change="changeOption()" id="options" ng-model="selectedYear" ng-options="opt.year for opt in selectOptions">
+	</select>
+	 </h4>
+
+
+	<div class="row" ng-hide="detailOn">
+		<div class="col-xs-1">
+				<h3> - </h3>
+				<div ng-repeat="mes in stats.lineas[0].years[0].months">
+					<div class="row  linea-mes ">
+						<h3> {{mes.key}} </h3>
+					</div>
+				</div>
+		</div>
+		<div class="col-xs-1" ng-repeat="linea in stats.lineas">
+			<h3>{{linea.key}}</h3>
+			<div class="" ng-repeat="mes in stats.lineas[0].years[0].months">
+				<div class="row linea-mes color-{{linea.key}} " style="background-color: {{ setColorFor(linea,mes) }};" >
+					<h3> <a href="" ng-click="showDetail(linea,mes)" > {{ getValueFor(linea,mes) }} </a> </h3>
+				</div>	
+			</div>
+
+			
+		</div>
+	</div>
+	<div class="row" ng-show="detailOn">
+		<a href="" ng-click="closeDetail()"> Cerrar </a>
+
+		<h1> {{selectedLinea.key}} {{selectedYear.year}} - {{selectedMonth.key}} </h1>
+		<h3> <strong> {{selectedMonth.values.length}} <small> reclamos </small> </strong> </h3>
+		<div ng-repeat="temas in selectedMonth.temas.slice(0,3)" >
+	    	<div class="row">
+	    		<div class="col-md-8">
+	    			<h4> <strong>{{temas.key}}</strong></h4>
+	    		</div>
+	    		<div class="col-md-4">
+	    			<h3>{{temas.values.length}} <small> {{temas.values.length* 100 / selectedMonth.values.length}} % </small></h3>
+	    		</div>
+	    	</div>
+    	</div>
+    	<div class="col-xs-8">
+    		<canvas  id="mainChart"  class="chart chart-line" chart-data="data" chart-labels="labels"
+                      chart-series="series" chart-options="options"></canvas>
+
+    	</div>
+    </div>
+
+    	
+	 
+
+	</div>
+
+ </div>

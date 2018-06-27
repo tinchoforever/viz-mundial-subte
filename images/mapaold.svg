@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="700px" height="700px" viewBox="0 0 2200 2200" style="enable-background:new 0 0 2200 2200;" xml:space="preserve">
+<style type="text/css">
+
+	path, circle {
+		stroke-width: 8;
+		stroke-miterlimit: 10;
+		}
+
+	#escala {
+		stroke: silver;
+		 stroke-width: 12px;
+		fill: #FFFFFF;
+
+	}
+
+	text.escala{
+		fill: gray;
+		font-size: 60px;
+	    font-weight: 400;
+	    text-anchor:end;
+	}
+
+	#escalaNumber{
+		text-anchor:middle;
+	}
+
+
+	.linea_A {
+		fill: #FFFFFF;
+		stroke: #2DC1D8;
+		}
+	
+	.linea_B {
+		fill: #FFFFFF;
+		stroke: #CE2027;
+		}
+	
+	.linea_C {
+		fill: #FFFFFF;
+		stroke: #2D6CB5;
+		}
+	
+	.linea_D {
+		fill: #FFFFFF;
+		stroke: #02996B;
+		}
+	
+	.linea_E {
+		fill: #FFFFFF;
+		stroke: #843B96;
+		}
+	
+	.linea_H {
+		fill: #FFFFFF;
+		stroke: #FEBC12;
+		}
+
+	.coneccion {
+		fill: #FFFFFF;
+		stroke: #000000;
+	}
+
+	path {
+		fill:none;
+		}
+
+
+	.controles path{
+		troke-width: 11;
+	}
+	
+
+
+	text.linea_A{
+		fill: #2DC1D8;
+		}
+	
+	text.linea_B{
+		fill: #CE2027;
+		}
+	
+	text.linea_C{
+		fill: #2D6CB5;
+		}
+	
+	text.linea_D{
+		fill: #02996B;
+		}
+	
+	text.linea_E{
+		fill: #843B96;
+		}
+	
+	text.linea_H{
+		fill: #FEBC12;
+		}
+
+
+
+
+
+
+</style>
+<g class="controles" transform="translate(0,-1730)">
+	<circle id="escala" cx="1000" cy="1848.7" r="51"/>
+	<circle class="linea_A" cx="1331.7" cy="1848.7" r="56.8"/>
+	<circle class="linea_B" cx="1479" cy="1848.7" r="56.8"/>
+	<circle class="linea_C" cx="1626.3" cy="1848.7" r="56.8"/>
+	<circle class="linea_D" cx="1773.6" cy="1848.7" r="56.8"/>
+	<circle class="linea_E" cx="1920.9" cy="1848.7" r="56.8"/>
+	<circle class="linea_H" cx="2068.2" cy="1848.7" r="56.8"/>
+
+	<g>
+		<text transform="matrix(1 0 0 1 900 1872.3179)" class="escala">Escala:</text>
+	</g>
+
+	<g>
+		<text transform="matrix(1 0 0 1 1000 1980)" id="escalaNumber" class="escala">250.000</text>
+	</g>
+
+	<g>
+		<text transform="matrix(1 0 0 1 1308.9281 1872.3179)" class="linea_A">A</text>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1455.3103 1872.3179)" class="linea_B">B</text>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1601.7429 1872.3179)" class="linea_C">C</text>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1751.5837 1872.3179)" class="linea_D">D</text>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1899.1117 1872.3179)" class="linea_E">E</text>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 2040.2559 1872.3179)" class="linea_H">H</text>
+	</g>
+<!-- 	<text transform="matrix(1 0 0 1 1282.6527 1746.8427)" class="titulo">Seleccionar por línea</text>
+ --></g>
+
+
+<g class="linea linea_A">
+	<path d="M2066.9,979.7H740.3c-38.5,0-75.2,15.4-102.3,42.5L125.8,1533"/>
+</g>
+<g class="linea linea_B">
+	<path d="M2066.9,841.1H740.3c-38.5,0-75.5-15.4-102.7-42.5L125.8,286.4"/>
+</g>
+<g class="linea linea_C">
+	<path d="M1928.3,425v217c0,38.5-15.4,75.5-42.5,102.7l-192.5,192.5c-27.1,27.1-42.5,64.2-42.5,102.7V1533"/> 
+</g>
+<g class="linea linea_D">
+	<path d="M1928.3,979.7L1693.6,745c-27.1-27.1-64.2-42.5-102.7-42.5H879.3c-38.5,0-75.5-15.4-102.7-42.5L264.4,147.8"/>
+</g>
+<g class="linea linea_E">
+	<path d="M1928.3,979.7l-236.5,233.9c-27.1,26.8-63.8,42.3-101.9,42.3h-711c-38.5,0-75.2,16-102.3,43.1l-512.2,512.6"/>
+</g>
+<g class="linea linea_H">
+	<path d="M1096.3,1811.7v-771.8c0-38.5,15.4-75.5,42.5-102.7l53.5-53.5c27.1-27.1,42.5-64.2,42.5-102.7V563.9"/>
+</g>
+
+<g class="linea linea_A">
+	
+	<circle id="70" cx="2066.9" cy="979.7" r="18"/>
+	<circle id="32" cx="1789.7" cy="979.7" r="18"/>
+	<circle id="34" cx="1512.5" cy="979.7" r="18"/>
+	<circle id="35" cx="1373.5" cy="979.7" r="18"/>
+	<circle id="36" cx="1234.6" cy="979.7" r="18"/>
+	<circle id="39" cx="957.7" cy="979.7" r="18"/>
+	<circle id="40" cx="819.1" cy="979.7" r="18"/>
+	<circle id="41" cx="680.2" cy="993.7" r="18"/>
+	<circle id="42" cx="587.8" cy="1072.1" r="18"/>
+	<circle id="43" cx="495.4" cy="1164.5" r="18"/>
+	<circle id="76" cx="403" cy="1256.9" r="18"/>
+	<circle id="43" cx="310.6" cy="1349.7" r="18"/>
+	<circle id="82" cx="218.2" cy="1442.1" r="18"/>
+	<circle id="83" cx="125.8" cy="1534.5" r="18"/>
+	<circle id="31" comb="31+69+44" cx="1928.3" cy="979.7" r="18"/>
+	<circle id="38" comb="38+5" cx="1110.3" cy="979.7" r="18"/>
+	<circle id="33" comb="33+16" cx="1665" cy="979.7" r="18"/>
+</g>
+<g class="linea linea_B">
+	<circle id="72" cx="2066.9" cy="841.1" r="18"/>
+	<circle id="20" cx="1928.3" cy="841.1" r="18"/>
+	<circle id="22" cx="1651.1" cy="841.1" r="18"/>
+	<circle id="23" cx="1512.5" cy="841.1" r="18"/>
+	<circle id="24" cx="1373.5" cy="841.1" r="18"/>
+	<circle id="26" cx="1096.3" cy="841.1" r="18"/>
+	<circle id="27" cx="957.7" cy="841.1" r="18"/>
+	<circle id="28" cx="819.1" cy="841.1" r="18"/>
+	<circle id="29" cx="680.2" cy="828.7" r="18"/>
+	<circle id="30" cx="587.8" cy="750.2" r="18"/>
+	<circle id="66" cx="495.4" cy="657.4" r="18"/>
+	<circle id="73" cx="403" cy="564.7" r="18"/>
+	<circle id="74" cx="310.6" cy="471.9" r="18"/>
+	<circle id="80" cx="218.2" cy="379.1" r="18"/>
+	<circle id="81" cx="125.8" cy="286.4" r="18"/>
+	<circle id="21" comb="21+15+6" cx="1789.5" cy="841.1" r="18"/>
+	<circle id="25" comb="25+77" cx="1221" cy="841.1" r="18"/>
+</g>
+
+<g class="linea linea_C">
+	<circle id="13" cx="1928.3" cy="425" r="18"/>
+	<circle id="57" cx="1928.3" cy="563.9" r="18"/>
+	<circle id="14" cx="1914.4" cy="702.5" r="18"/>
+	<circle id="17" cx="1651.1" cy="1118.3" r="18"/>
+	<circle id="58" cx="1651.1" cy="1395.9" r="18"/>
+	<circle id="19" cx="1651.1" cy="1534.5" r="18"/>
+	<circle id="15" comb="21+15+6" cx="1789.5" cy="841.1" r="18"/>
+	<circle id="16" comb="33+16" cx="1665" cy="979.7" r="18"/>
+	<circle id="18" comb="18+46" cx="1650.7" cy="1243" r="18"/>
+</g>
+
+
+<g class="linea linea_D">
+
+	<circle id="65" cx="264.4" cy="147.8" r="18"/>
+	<circle id="64" cx="356.8" cy="240.2" r="18"/>
+	<circle id="63" cx="449.2" cy="332.6" r="18"/>
+	<circle id="62" cx="541.6" cy="425" r="18"/>
+	<circle id="12" cx="634" cy="517.4" r="18"/>
+	<circle id="11" cx="726.4" cy="610.1" r="18"/>
+	<circle id="10" cx="819.1" cy="688.6" r="18"/>
+	<circle id="54" cx="957.7" cy="702.5" r="18"/>
+	<circle id="9" cx="1096.3" cy="702.5" r="18"/>
+	<circle id="7" cx="1373.5" cy="702.5" r="18"/>
+	<circle id="56" cx="1512.5" cy="702.5" r="18"/>
+	<circle id="8" cx="1651.1" cy="716.5" r="18"/>
+	<circle id="6" comb="21+15+6" cx="1789.5" cy="841.1" r="18"/>
+	<circle id="69" comb="31+69+44" cx="1928.3" cy="979.7" r="18"/>
+	<circle id="55" comb="55+86" cx="1234.6" cy="702.5" r="18"/>
+</g>
+
+<g class="linea linea_E">
+	<circle id="67" cx="264.4" cy="1811.7" r="18"/>
+	<circle id="68" cx="356.8" cy="1719.3" r="18"/>
+	<circle id="59" cx="449.2" cy="1626.9" r="18"/>
+	<circle id="53" cx="541.6" cy="1534.5" r="18"/>
+	<circle id="52" cx="634" cy="1442.1" r="18"/>
+	<circle id="60" cx="726.4" cy="1349.7" r="18"/>
+	<circle id="61" cx="819.1" cy="1269.7" r="18"/>
+	<circle id="51" cx="957.7" cy="1256.7" r="18"/>
+	<circle id="49" cx="1234.9" cy="1256.1" r="18"/>
+	<circle id="48" cx="1373.5" cy="1256.1" r="18"/>
+	<circle id="47" cx="1512.5" cy="1256.7" r="18"/>
+	<circle id="45" cx="1789.7" cy="1118.3" r="18"/>
+	<circle id="44" comb="31+69+44" cx="1928.3" cy="979.7" r="18"/>
+	<circle id="50" comb="50+3" cx="1096.3" cy="1256.9" r="18"/>
+	<circle id="46" comb="18+46" cx="1650.7" cy="1243" r="18"/>
+
+</g>
+
+<g class="linea linea_H">
+	<circle id="79" cx="1096.3" cy="1811.7" r="18"/>
+	<circle id="78" cx="1096.3" cy="1673.1" r="18"/>
+	<circle id="1" cx="1096.3" cy="1534.5" r="18"/>
+	<circle id="2" cx="1096.3" cy="1395.9" r="18"/>
+	<circle id="4" cx="1096.3" cy="1118.3" r="18"/>
+	<circle id="85" cx="1234.9" cy="563.9" r="18"/>
+	<circle id="86" comb="55+86" cx="1234.6" cy="702.5" r="18"/>
+	<circle id="77" comb="25+77" cx="1221" cy="841.1" r="18"/>
+	<circle id="3" comb="50+3" cx="1096.3" cy="1256.9" r="18"/>
+	<circle id="5" comb="38+5" cx="1110.3" cy="979.7" r="18"/>
+</g>
+
+</svg>

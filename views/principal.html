@@ -1,0 +1,58 @@
+<div class="container">
+	<div ng-hide="reclamos">
+		<h2> Cargando Reclamos desde 2014 a 2017 </h2>
+	</div>
+	<div ng-show="reclamos">
+            <h1 on-finish-render="ngRepeatFinished()"> ¿Como se movieron los reclamos? </h1>
+            <h2> De 2014 a 2017 hubieron {{reclamos.all.length}}  reclamos </h2>
+            <div ng-repeat="reclamos in reclamos.dataset" >
+            	<h3>Durante <strong>{{reclamos.year}}</strong> tuvimos <strong>{{reclamos.data.length}}</strong>  reclamos en el subte </h3>
+
+            </div>
+            <div class="row">
+            <div class="col-md-4">
+	            <h1>¿ Que reclamaron? </h1>
+	            <div ng-repeat="temas in reclamos.reclamosTema | orderBy:'-values.length'" >
+	            	<div class="row">
+	            		<div class="col-md-8">
+	            			<h3> <strong>{{temas.key}}</strong></h3>
+	            		</div>
+	            		<div class="col-md-4">
+	            			<h2>{{temas.values.length}}</h2>
+	            		</div>
+	            	</div>
+	            	
+	            </div>
+	        </div>
+		     <div class="col-md-4">
+		            <h1>¿ Que reclamaron temas? </h1>
+		            <div ng-repeat="subtema in reclamos.subtemas | orderBy:'-values.length'" >
+		            	<div class="row">
+	            		<div class="col-md-8">
+	            			<h4> <strong>{{subtema.key}}</strong></h4>
+	            		</div>
+	            		<div class="col-md-4">
+	            			<h5>{{subtema.values.length}}</h5>
+	            		</div>
+	            	</div>
+		            	
+		            </div>
+		      </div>
+		    <div class="col-md-4">
+		            <h1>¿ Que estaciones fueron mas reclamadas? </h1>
+		            <div ng-repeat="estacion in reclamos.estaciones | orderBy:'-values.length'" >
+		            	<div class="row">
+	            		<div class="col-md-8">
+	            			<h4> <strong>{{estacion.key}}</strong></h4>
+	            		</div>
+	            		<div class="col-md-4">
+	            			<h5>{{estacion.values.length}}</h5>
+	            		</div>
+	            	</div>
+		            	
+		            </div>
+		      </div>
+   		</div>
+
+	</div>
+</div>

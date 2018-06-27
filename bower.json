@@ -1,0 +1,22 @@
+{
+  "name": "CajaRoja.tv",
+  "version": "0.0.0",
+  "homepage": "https://github.com/tinchoforever/CajaRoja.tv",
+  "authors": [
+    "tinchoforever <tinchoforever@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "wowjs": "~1.1.2",
+    "FlexSlider": "~2.6.1",
+    "slick-carousel": "~1.6.0",
+    "angular-chart.js": "^1.1.1"
+  }
+}
