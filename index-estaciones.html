@@ -54,17 +54,19 @@ var format = d3.time.format("%Y-%m-%d %H:%M:%S");
 var formatIncidentes = d3.time.format("%d/%m/%Y %H:%M:%S");
 var mainData = [];
 var incidentes = [];
-var graph = d3.csv('data-linea.csv', function(csv) {
+var graph = d3.csv('data.csv', function(csv) {
   mainData = csv;
   d3.csv('data/arg-nig.csv', function(data) {
     incidentes = data;
-    var estaciones = ['LINEA_B',
-'LINEA_A',
-'LINEA_C',
-'LINEA_D',
-'LINEA_E',
-'LINEA_H'
-];
+    var estaciones = ['PLAZA MISERERE', /*las estaciones pedidas */
+                  'FEDERICO LACROZE', 
+                    'CARLOS PELLEGRINI',
+                    'RETIRO',
+                    'CONSTITUCION',
+                    'CONGRESO DE TUCUMAN', 
+                    'CATEDRAL',
+                    'BOLIVAR',
+                    'HOSPITALES'];
 
     for (var i = 0; i < estaciones.length; i++) {
       var element = '<h2><a href="#" class="estacion" estacion="'+  estaciones[i] +'">' + estaciones[i]  + ' | </a></h2>';
