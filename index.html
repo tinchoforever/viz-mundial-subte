@@ -120,6 +120,11 @@ $('body').append('<div id="'+id +'"></div>');
       types: {
             'estacion': 'spline',
             'partido': 'bar',
+        },
+        labels: {
+            format: {
+                partido: function (v, id, i, j) { return incidentes[i].Descripcion; },
+            }
         }
     },
         axis: {
