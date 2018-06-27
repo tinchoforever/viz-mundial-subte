@@ -69,7 +69,7 @@ var graph = d3.csv('data.csv', function(csv) {
                     'HOSPITALES'];
 
     for (var i = 0; i < estaciones.length; i++) {
-      var element = '<h2><a href="#" class="estacion" estacion="'+  estaciones[i] +'">' + estaciones[i]  + ' | </a></h2>';
+      var element = '<h2> ¿Cúantas personas entraron en la estación ' + estaciones[i] + '?</h2>';
       $('body').append(element);
        chart(estaciones[i]);
     }
