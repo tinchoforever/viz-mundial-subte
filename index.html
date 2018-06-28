@@ -102,6 +102,7 @@ var id = 'chart-'+ cl;
 var circles = 'circles-'+ cl;
 $('body').append('<div id="'+id +'"></div>');
 $('body').append('<div id="'+circles +'"></div>');
+$('body').append('<div id="second'+circles +'"></div>');
 
     var estacionData = mainData.filter(function(d){
       return d.key == estacion;
@@ -182,7 +183,7 @@ d3.xml("images/mapa.svg").mimeType("image/svg+xml").get(function(error, xml) {
            var dataEstaciones = promedioEstaciones.filter(function(e){
             return e.linea === lineaLetra;
            })
-
+        $('#' + circles).append('<h1>Linea Durante Partido</h1>');
         d3.select('#' + circles).node().appendChild(xml.documentElement);
         var s = '#' + circles + ' svg';
         d3.select('#' + circles + ' svg')
@@ -199,11 +200,36 @@ d3.xml("images/mapa.svg").mimeType("image/svg+xml").get(function(error, xml) {
             if (!currentPersons[0]){
               return 0;
             }else {
-              return parseInt(currentPersons[0].personas) / 100;
+              return parseInt(currentPersons[0].partido) / 100;
             }
           });
-        
+  });
+d3.xml("images/mapa.svg").mimeType("image/svg+xml").get(function(error, xml) {
+        if (error) throw error;
+          var lineaLetra = estacion.replace('LINEA_','');
+           var dataEstaciones = promedioEstaciones.filter(function(e){
+            return e.linea === lineaLetra;
+           })
+        $('#second' + circles).append('<h1>Linea promedioEstaciones</h1>');
+        d3.select('#second' + circles).node().appendChild(xml.documentElement);
+        var s = '#second' + circles + ' svg';
+        d3.select('#second' + circles + ' svg')
+          .attr('width','100%')
+          .attr('height','550px');
 
+          d3.selectAll(s + ' .linea circle').attr('r', function(d,i){
+
+            var id=  parseInt(d3.select(this).attr("id"));
+            var currentPersons = dataEstaciones.filter(function(de){
+              return de.estacion.ID == id;
+            
+            });
+            if (!currentPersons[0]){
+              return 0;
+            }else {
+              return parseInt(currentPersons[0].promedio) / 100;
+            }
+          });
   });
     
 }
