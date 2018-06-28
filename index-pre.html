@@ -58,7 +58,7 @@ var nombresEstaciones = [];
 var promedioEstaciones = [];
 d3.csv('data/nombre-estaciones.csv', function(csvEstaciones) {
   nombresEstaciones = csvEstaciones;
-  d3.csv('data/estaciones-vs.csv', function(csvPromedioEstaciones) {
+  d3.csv('data/estaciones.csv', function(csvPromedioEstaciones) {
     promedioEstaciones = csvPromedioEstaciones.map(function(e){
       var n = csvEstaciones.filter(function(d){
         return d.ESTACION.trim() == e.estacion.trim()
@@ -73,7 +73,7 @@ d3.csv('data/nombre-estaciones.csv', function(csvEstaciones) {
     }).sort(function(a,b){
       return a.estacion.ID - b.estacion.ID;
     })
-var graph = d3.csv('data/lineas-vs.csv', function(csv) {
+var graph = d3.csv('data-linea.csv', function(csv) {
   mainData = csv;
     d3.csv('data/arg-nig.csv', function(data) {
       incidentes = data;
@@ -111,10 +111,10 @@ $('body').append('<div id="'+circles +'"></div>');
       d.sum =+d.value;
     });
     var values = estacionData.map(function(d){
-      return d.average;
+      return d.value;
     });
     var valuesBehind = estacionData.map(function(d,i){
-      return d.value;
+      return d.value /2 / (i+1) * i ;
     });
     var dates = estacionData.map(function(d){
       return d.date;
